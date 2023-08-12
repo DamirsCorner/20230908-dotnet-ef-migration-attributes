@@ -1,10 +1,13 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
 namespace EfCoreMigrationAttributes.Migrations
 {
     /// <inheritdoc />
+    [DbContext(typeof(PersonDbContext))]
+    [Migration("20230812093458_InitialCreate")]
     public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
